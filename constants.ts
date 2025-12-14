@@ -1,0 +1,77 @@
+import { Event, Message, MessageType } from './types';
+
+export const INITIAL_EVENTS: Event[] = [
+  {
+    id: '1',
+    title: 'Baile da TUPÃ - Edição Neon',
+    description: 'A maior festa eletrônica do ano com DJs internacionais.',
+    imageUrl: 'https://picsum.photos/400/300?random=1',
+    date: 'Hoje, 23:00',
+    location: 'Arena Central',
+    isSponsored: true,
+    attendees: 1250,
+  },
+  {
+    id: '2',
+    title: 'Sunset Rooftop VIP',
+    description: 'Open bar premium e vista para o mar.',
+    imageUrl: 'https://picsum.photos/400/300?random=2',
+    date: 'Amanhã, 16:00',
+    location: 'Sky Lounge',
+    attendees: 340,
+  },
+  {
+    id: '3',
+    title: 'Festival Gastronômico',
+    description: 'Sabores do mundo todo em um só lugar.',
+    imageUrl: 'https://picsum.photos/400/300?random=3',
+    date: 'Sábado, 12:00',
+    location: 'Parque das Flores',
+    attendees: 890,
+  },
+];
+
+export const INITIAL_MESSAGES: Message[] = [
+  {
+    id: '1',
+    userId: 'system',
+    userName: 'TUPÃ Bot',
+    userAvatar: 'https://picsum.photos/50/50?random=99',
+    content: 'Bem-vindo ao Chat Global! 🔥 Aqui você encontra a galera antes, durante e depois dos eventos.',
+    timestamp: Date.now() - 3600000,
+    type: MessageType.SYSTEM,
+    likes: 120,
+  },
+  {
+    id: '2',
+    userId: 'u1',
+    userName: 'Ana Silva',
+    userAvatar: 'https://picsum.photos/50/50?random=10',
+    content: 'Alguém animado para o Baile Neon hoje? Já comprei meu ingresso!',
+    timestamp: Date.now() - 1800000,
+    type: MessageType.TEXT,
+    likes: 12,
+  },
+  {
+    id: '3',
+    userId: 'u2',
+    userName: 'Carlos DJ',
+    userAvatar: 'https://picsum.photos/50/50?random=11',
+    content: 'Vou tocar na pista 2, espero vocês lá! 🎧',
+    timestamp: Date.now() - 900000,
+    type: MessageType.TEXT,
+    isVip: true,
+    likes: 45,
+  },
+  {
+    id: '4',
+    userId: 'u3',
+    userName: 'Marcos VIP',
+    userAvatar: 'https://picsum.photos/50/50?random=12',
+    content: 'O camarote do Sunset tá liberado que horas?',
+    timestamp: Date.now() - 300000,
+    type: MessageType.TEXT,
+    isVip: true,
+    likes: 2,
+  },
+];
